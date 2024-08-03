@@ -1,0 +1,12 @@
+gym>=0.2.3
+pybullet@ git+https://github.com/Zackory/bullet3.git#egg=pybullet
+numpy
+keras==2.3.0
+tensorflow==1.14.0
+h5py==2.10.0
+smplx
+trimesh
+ray[rllib]
+numpngw
+tensorflow-probability==0.7.0
+screeninfo==0.6.1
