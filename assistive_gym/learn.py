@@ -5,51 +5,7 @@ from ray.rllib.agents import ppo, sac
 from ray.tune.logger import pretty_print
 from numpngw import write_apng
 from ray.rllib.agents.trainer import Trainer
-
-# class SOPACTrainer(Trainer):
-#     _name = "SOPAC"  # Class attribute to store the name
-
-#     def __init__(self, config, env, logger_creator=None):
-#         super().__init__(config=config, env=env, logger_creator=logger_creator)
-#         self.config = config
-#         self.env = env
-#         self.ppo_trainer = ppo.PPOTrainer(config=config, env=env, logger_creator=logger_creator)
-#         self.sac_trainer = sac.SACTrainer(config=config, env=env, logger_creator=logger_creator)
-
-#     def _name(self):
-#         return self.__class__._name  # Return the class attribute
-
-#     def _train(self):
-#         ppo_results = self.ppo_trainer.train()
-#         sac_results = self.sac_trainer.train()
-#         results = {
-#             "ppo": ppo_results,
-#             "sac": sac_results,
-#         }
-#         return results
-
-#     def _save(self, checkpoint_dir):
-#         ppo_checkpoint = self.ppo_trainer.save(checkpoint_dir)
-#         sac_checkpoint = self.sac_trainer.save(checkpoint_dir)
-#         return {
-#             "ppo": ppo_checkpoint,
-#             "sac": sac_checkpoint,
-#         }
-
-#     def _restore(self, checkpoints):
-#         self.ppo_trainer.restore(checkpoints["ppo"])
-#         self.sac_trainer.restore(checkpoints["sac"])
-
-#     def compute_action(self, obs, **kwargs):
-#         ppo_action = self.ppo_trainer.compute_action(obs, **kwargs)
-#         sac_action = self.sac_trainer.compute_action(obs, **kwargs)
-#         # Combine PPO and SAC actions as needed
-#         combined_action = (ppo_action + sac_action) / 2
-#         return combined_action
-
-#     def __repr__(self):
-#         return f"SOPACTrainer(config={self.config}, env={self.env})"
-
+# from sopac import SOPACTrainer
 
 def setup_config(env, algo, coop=False, seed=0, extra_configs={}):
     num_processes = multiprocessing.cpu_count()
@@ -99,7 +55,7 @@ def load_policy(env, algo, env_name, policy_path=None, coop=False, seed=0, extra
     elif algo == 'sac':
         agent = sac.SACTrainer(setup_config(env, algo, coop, seed, extra_configs), 'assistive_gym:'+env_name)
     elif algo == 'sopac':
-        agent = ppo.PPOTrainer(setup_config(env, algo, coop, seed, extra_configs), 'assistive_gym:'+env_name)+sac.SACTrainer(setup_config(env, algo, coop, seed, extra_configs), 'assistive_gym:'+env_name)
+        agent = SOPACTrainer(setup_config(env, algo, coop, seed, extra_configs), 'assistive_gym:'+env_name)
     if policy_path != '':
         if 'checkpoint' in policy_path:
             agent.restore(policy_path)
