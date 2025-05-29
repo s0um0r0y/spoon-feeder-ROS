@@ -1,4 +1,4 @@
-# Assistive gym-based simulation for assistive drinking and feeding
+# Adaptive Robotic Manipulator Simulation for Enhanced Feeding and Drinking Assistance
 Implemented reinforcement learning algorithms (PPO, SAC and DDPG) across different manipulators simulating feeding and drinking tasks on OpenAI gym, which was published in IEEE INDICON-24
 conference [link of the paper](https://drive.google.com/file/d/1vM2wq5vHwwYHQxqxi9v7Wim37j7av-RD/view)
 
