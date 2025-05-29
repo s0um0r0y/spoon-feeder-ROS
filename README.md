@@ -2,7 +2,7 @@
 Implemented reinforcement learning algorithms (PPO, SAC and DDPG) across different manipulators simulating feeding and drinking tasks on OpenAI gym, which was published in IEEE INDICON-24
 conference [link of the paper](https://drive.google.com/file/d/1vM2wq5vHwwYHQxqxi9v7Wim37j7av-RD/view)
 
-![image](https://github.com/user-attachments/assets/ba386477-ea34-4868-a877-9bafc54a6945)
+![image](https://github.com/user-attachments/assets/ac1ad11f-25f4-4e08-972a-c1c1983a688a)
 
 ## Getting Started
 
