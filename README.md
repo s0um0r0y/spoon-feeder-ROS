@@ -36,8 +36,9 @@ Contributors names and contact info
 - Joel Viju [email id](joelviju.v2021@vitstudent.ac.in)
 - Budhaditya Bhattacharyya [email id](budhaditya@vit.ac.in)
 
-## Youtube Video link
-- [link](https://youtu.be/lUmjaiPeUig?si=6kwH3TB_CEuhUNlX)
+## Video link
+- [youtube link](https://youtu.be/lUmjaiPeUig?si=6kwH3TB_CEuhUNlX)
+- [google drive link](https://drive.google.com/drive/folders/1jhOQWtvApqJR4CDxilfgPWyVUXPcWEZl?usp=sharing)
 
 ## Citations 
 - Please consider citing us if you liked our project
