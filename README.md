@@ -48,6 +48,9 @@ Contributors names and contact info
     url={https://doi.org/10.1109/INDICON63790.2024.10958301}, 
 }
 ```
+## License
+
+This project is licensed under the [MIT] License - see the LICENSE.md file for details
 
 ## Acknowledgments
 - I utilized [assistive gym](https://github.com/Healthcare-Robotics/assistive-gym) platform made by Dr. Zackory Erickson at CMU
