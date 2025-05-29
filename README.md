@@ -14,7 +14,7 @@ conference [link of the paper](https://drive.google.com/file/d/1vM2wq5vHwwYHQxqx
 ```bash
 python3 -m pip install --upgrade pip
 git clone https://github.com/s0um0r0y/spoon-feeder-ROS.git
-cd assistive-gym
+cd spoon-feeder-ROS
 python3 -m pip install -e .
 ```
 
