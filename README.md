@@ -1,6 +1,55 @@
-## Assistive gym-based simulation for assistive drinking and feeding
+# Assistive gym-based simulation for assistive drinking and feeding
+Implemented reinforcement learning algorithms (PPO, SAC and DDPG) across different manipulators simulating feeding and drinking tasks on OpenAI gym, which was published in IEEE INDICON-24
+conference [link of the paper](https://drive.google.com/file/d/1vM2wq5vHwwYHQxqxi9v7Wim37j7av-RD/view)
 
-### simulation GIF using RL (PPO,SAC and DDPG)
+## Getting Started
 
-<img width="476" alt="image" src="https://github.com/user-attachments/assets/7abbae4a-9606-4434-8986-b5002d6f07e8" />
+### Dependencies
+* Pytorch
+* OpenAI gym
+* CUDA
+* Ubuntu 20.04
 
+### Installing
+```bash
+python3 -m pip install --upgrade pip
+git clone https://github.com/s0um0r0y/spoon-feeder-ROS.git
+cd assistive-gym
+python3 -m pip install -e .
+```
+
+### Train a new control policy
+* running training (PPO)
+  ```bash
+  python3 -m assistive_gym.learn --env "ScratchItchJaco-v1" --algo ppo --train --train-timesteps 20000 --save-dir ./trained_models_new/
+  ```
+* visualizing the trained model
+  ```bash
+  python3 -m assistive_gym.learn --env "ScratchItchJaco-v1" --algo ppo --render --seed 0 --load-policy-path ./trained_models_new/
+  ```
+
+## Authors
+Contributors names and contact info
+- Soumo Roy [email id](soumoroy09@gmail.com)
+- Joel Viju [email id](joelviju.v2021@vitstudent.ac.in)
+- Budhaditya Bhattacharyya [email id](budhaditya@vit.ac.in)
+
+## Youtube Video link
+- [link](https://youtu.be/lUmjaiPeUig?si=6kwH3TB_CEuhUNlX)
+
+## Citations 
+- Please consider citing us if you liked our project
+```
+@article{roy2025adaptiveroboticmanipulatorsimulation,
+    title={Adaptive Robotic Manipulator Simulation for Enhanced Feeding and Drinking Assistance}, 
+    author={Soumo Roy, Joel Viju and Budhaditya Bhattacharyya},
+    year={2025},
+    journal={IEEE India Council International Conference (INDICON)}
+    url={https://doi.org/10.1109/INDICON63790.2024.10958301}, 
+}
+```
+
+## Acknowledgments
+- I utilized [assistive gym](https://github.com/Healthcare-Robotics/assistive-gym) platform made by Dr. Zackory Erickson at CMU
+- I would like to thank our professor [Dr. Budhaditya Bhattacharya](budhaditya@vit.ac.in) for his support, guidance and valuable time.
+- This work was financialy supported by Vellore Institute of Technology (VIT), Vellore under the Faculty Seed Grant (RGEMS) (Sanction Order No.: SG20220001)
