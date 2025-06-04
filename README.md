@@ -43,12 +43,13 @@ Contributors names and contact info
 ## Citations 
 - Please consider citing us if you liked our project
 ```
-@article{roy2025adaptiveroboticmanipulatorsimulation,
-    title={Adaptive Robotic Manipulator Simulation for Enhanced Feeding and Drinking Assistance}, 
-    author={Soumo Roy, Joel Viju and Budhaditya Bhattacharyya},
-    year={2025},
-    journal={IEEE India Council International Conference (INDICON)}
-    url={https://doi.org/10.1109/INDICON63790.2024.10958301}, 
+@inproceedings{roy2024adaptive,
+  title={Adaptive Robotic Manipulator Simulation for Enhanced Feeding and Drinking Assistance},
+  author={Roy, Soumo and Viju, Joel and Bhattacharyya, Budhaditya},
+  booktitle={2024 IEEE 21st India Council International Conference (INDICON)},
+  pages={1--6},
+  year={2024},
+  organization={IEEE}
 }
 ```
 ## License
