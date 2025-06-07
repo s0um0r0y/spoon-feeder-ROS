@@ -28,11 +28,11 @@ python3 -m pip install -e .
 ### Train a new control policy
 * running training (PPO)
   ```bash
-  python3 -m assistive_gym.learn --env "ScratchItchJaco-v1" --algo ppo --train --train-timesteps 20000 --save-dir ./trained_models_new/
+  python3 -m assistive_gym.learn --env "FeedingJaco-v1" --algo ppo --train --train-timesteps 20000 --save-dir ./trained_models_new/
   ```
 * visualizing the trained model
   ```bash
-  python3 -m assistive_gym.learn --env "ScratchItchJaco-v1" --algo ppo --render --seed 0 --load-policy-path ./trained_models_new/
+  python3 -m assistive_gym.learn --env "FeedingJaco-v1" --algo ppo --render --seed 0 --load-policy-path ./trained_models_new/
   ```
 
 ## Authors
